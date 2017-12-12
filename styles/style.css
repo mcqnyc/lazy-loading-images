@@ -1,0 +1,17 @@
+.item {
+  display: inline-block;
+  width: 300px;
+  padding: 4px;
+}
+
+.item-text {
+  margin: 8px 4px;
+}
+
+img {
+  width: 300px;
+}
+
+.hidden {
+  display: none;
+}

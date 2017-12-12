@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lazy-loading images</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h1>Lazy-loading images</h1>
+  <div id="listing">
+
+    <!-- first few items are loaded normally -->
+    <div class="item">
+      <img 
+        src="https://res.cloudinary.com/simpleview/image/fetch/c_fill,f_auto,h_308,q_75,w_550/https://res.cloudinary.com/simpleview/image/upload/crm/newyorkstate/5bc766e4-e1e8-4d16-986b-0956bd990b18_e271c6c2-e99c-631b-711cd04248fa049a.jpg" 
+      />
+      <div class="item-text">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      </div>
+    </div>
+    
+    <div class="item">
+      <img 
+        src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_251,q_75,w_446/v1/clients/newyorkstate/Ride_and_Ice_Bike_at_Canalside_371c0cac-0c8f-4dbd-a89e-39c1f7295a55.jpg" 
+      />
+      <div class="item-text">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      </div>
+    </div>
+    
+    <div class="item">
+      <img 
+        src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_251,q_75,w_446/v1/clients/newyorkstate/FAMILY_Windham_Mountain_Resort_highlight_363ce3d7-675d-4e2a-9a8e-0ff8463e317a.jpg" 
+      />
+      <div class="item-text">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      </div>
+    </div>
+    
+    <!-- everything after this is lazy -->
+    <div id="viewMore">
+        <a href="flatpage.html#more">View more</a>
+    </div>
+    <div id="nextPage" class="hidden">
+        
+      <div class="item">
+        <img 
+          src="http://spacergif.org/spacer.gif" 
+          class="lazy" 
+          data-src="https://res.cloudinary.com/simpleview/image/fetch/c_fill,f_auto,h_308,q_75,w_550/https://res.cloudinary.com/simpleview/image/upload/crm/newyorkstate/Basilica_Farm_and_Flea_CMORENY_1d84899f-c2b1-9b31-a440097c17dbba13.jpg"
+        />
+        <noscript>
+          <img 
+            src="https://res.cloudinary.com/simpleview/image/fetch/c_fill,f_auto,h_308,q_75,w_550/https://res.cloudinary.com/simpleview/image/upload/crm/newyorkstate/Basilica_Farm_and_Flea_CMORENY_1d84899f-c2b1-9b31-a440097c17dbba13.jpg" 
+          />
+        </noscript>
+        <div class="item-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </div>
+      </div>
+      
+      <div class="item">
+        <img 
+          src="http://spacergif.org/spacer.gif" 
+          class="lazy" 
+          data-src="https://res.cloudinary.com/simpleview/image/fetch/c_fill,f_auto,h_308,q_75,w_550/https://res.cloudinary.com/simpleview/image/upload/crm/newyorkstate/11_The-Frosties-002-_500347a2-b696-9e56-ee3c0f9a1faf8e1e.jpg"
+        />
+        <noscript>
+          <img 
+            src="https://res.cloudinary.com/simpleview/image/fetch/c_fill,f_auto,h_308,q_75,w_550/https://res.cloudinary.com/simpleview/image/upload/crm/newyorkstate/11_The-Frosties-002-_500347a2-b696-9e56-ee3c0f9a1faf8e1e.jpg" 
+          />
+        </noscript>
+        <div class="item-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </div>
+      </div>
+      
+      <div class="item">
+        <img 
+          src="http://spacergif.org/spacer.gif" 
+          class="lazy" 
+          data-src="https://res.cloudinary.com/simpleview/image/fetch/c_fill,f_auto,h_308,q_75,w_550/https://res.cloudinary.com/simpleview/image/upload/crm/newyorkstate/f0d047d2-458e-4bf2-b561-d69011cc3b59_44e24d7e-eb2b-4874-c7041daad9dbbddb.jpg" 
+        />
+        <noscript>
+          <img 
+            src="https://res.cloudinary.com/simpleview/image/fetch/c_fill,f_auto,h_308,q_75,w_550/https://res.cloudinary.com/simpleview/image/upload/crm/newyorkstate/f0d047d2-458e-4bf2-b561-d69011cc3b59_44e24d7e-eb2b-4874-c7041daad9dbbddb.jpg" 
+          />
+        </noscript>
+        <div class="item-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </div>
+      </div>
+      
+      <div class="item">
+        <img 
+          src="http://spacergif.org/spacer.gif" 
+          class="lazy" 
+          data-src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_251,q_75,w_446/v1/clients/newyorkstate/instagramphoto_612a4884-4d4e-48f5-af6e-34f0560d4989.jpg" 
+        />
+        <noscript>
+          <img 
+            src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_251,q_75,w_446/v1/clients/newyorkstate/instagramphoto_612a4884-4d4e-48f5-af6e-34f0560d4989.jpg" 
+          />
+        </noscript>
+        <div class="item-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </div>
+      </div>
+      
+      <div class="item">
+        <img 
+          src="http://spacergif.org/spacer.gif" 
+          class="lazy" 
+          data-src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_251,q_75,w_446/v1/clients/newyorkstate/snowboarding_2bad1595-daf1-4205-8e91-62957c00525c.png" 
+        />
+        <noscript>
+          <img 
+            src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_251,q_75,w_446/v1/clients/newyorkstate/snowboarding_2bad1595-daf1-4205-8e91-62957c00525c.png" 
+          />
+        </noscript>
+        <div class="item-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </div>
+      </div>
+      
+      <div class="item">
+        <img 
+          src="http://spacergif.org/spacer.gif" 
+          class="lazy" 
+          data-src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_251,q_75,w_446/v1/clients/newyorkstate/The_Point_Mohawk_Room_HiRes_e59d1ecb-e139-4e20-93b7-0e0acf936949.jpg" 
+        />
+        <noscript>
+          <img 
+            src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_251,q_75,w_446/v1/clients/newyorkstate/The_Point_Mohawk_Room_HiRes_e59d1ecb-e139-4e20-93b7-0e0acf936949.jpg" 
+          />
+        </noscript>
+        <div class="item-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </div>
+      </div>
+      
+      <div class="item">
+        <img 
+          src="http://spacergif.org/spacer.gif" 
+          class="lazy" 
+          data-src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_251,q_75,w_446/v1/clients/newyorkstate/ILNY_BLOG_02_7_1_ddd54a4d-1b64-4e11-8124-dd7133edaa3f.jpg" 
+        />
+        <noscript>
+          <img 
+            src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_251,q_75,w_446/v1/clients/newyorkstate/ILNY_BLOG_02_7_1_ddd54a4d-1b64-4e11-8124-dd7133edaa3f.jpg" 
+          />
+        </noscript>
+        <div class="item-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </div>
+      </div>
+      
+      <div class="item">
+        <img 
+          src="http://spacergif.org/spacer.gif" 
+          class="lazy" 
+          data-src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_251,q_75,w_446/v1/clients/newyorkstate/22240e51_33b6_4405_a7a3_f819065c6dca_15cf1db4-af1d-460f-b535-8620f036a4f0.jpg" 
+        />
+        <noscript>
+          <img 
+            src="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_251,q_75,w_446/v1/clients/newyorkstate/22240e51_33b6_4405_a7a3_f819065c6dca_15cf1db4-af1d-460f-b535-8620f036a4f0.jpg" 
+          />
+        </noscript>
+        <div class="item-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/scroll.js"></script>
+</body>
+</html>
